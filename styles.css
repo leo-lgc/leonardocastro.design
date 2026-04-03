@@ -155,8 +155,11 @@ h3 {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 7px;
+  justify-content: space-between;
+  gap: 0;
+  width: 96px;
+  height: 40px;
+  padding: 4px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--panel-strong);
@@ -186,9 +189,11 @@ body[data-theme="dark"] .language-toggle:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  width: 42px;
+  height: 30px;
+  border-radius: 999px;
   transition: transform 280ms ease, background 220ms ease, color 220ms ease, opacity 220ms ease;
 }
 
