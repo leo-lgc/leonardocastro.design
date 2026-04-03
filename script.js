@@ -55,8 +55,8 @@ function setupParallax() {
 
       layers.forEach((layer) => {
         const depth = Number(layer.dataset.depth || 10);
-        const intensity = layer.classList.contains("hero-tag") ? 1.45 : 0.95;
-        const rotate = layer.classList.contains("hero-tag") ? x * depth * 0.12 : x * depth * 0.03;
+        const intensity = layer.classList.contains("hero-tag") ? 0.9 : 0.6;
+        const rotate = layer.classList.contains("hero-tag") ? x * depth * 0.05 : x * depth * 0.02;
 
         layer.style.setProperty("--px", `${x * depth * intensity}px`);
         layer.style.setProperty("--py", `${y * depth * (intensity * 0.9)}px`);

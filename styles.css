@@ -382,14 +382,14 @@ main {
 }
 
 .hero-copy-card {
-  padding: 34px;
+  padding: 32px;
 }
 
 .hero-copy-below {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
-  column-gap: 28px;
-  row-gap: 14px;
+  column-gap: 32px;
+  row-gap: 16px;
   align-items: start;
   max-width: none;
 }
@@ -451,7 +451,7 @@ main {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 16px;
   margin-top: 24px;
 }
 
@@ -604,8 +604,8 @@ body[data-theme="dark"] .signal-list li:hover {
 .hero-scene-board::after {
   inset: -22%;
   background: conic-gradient(from 90deg, transparent 0deg, rgba(255, 255, 255, 0.28) 58deg, transparent 110deg, transparent 360deg);
-  opacity: 0.26;
-  animation: scene-sweep 16s linear infinite;
+  opacity: 0.12;
+  animation: scene-sweep 24s linear infinite;
 }
 
 body[data-theme="dark"] .hero-scene-board {
@@ -636,8 +636,8 @@ body[data-theme="dark"] .hero-scene-board::after {
   position: absolute;
   border-radius: 50%;
   filter: blur(6px);
-  opacity: 0.7;
-  animation: glow-drift 9s ease-in-out infinite;
+  opacity: 0.48;
+  animation: glow-drift 14s ease-in-out infinite;
 }
 
 .glow-one {
@@ -715,11 +715,11 @@ body[data-theme="dark"] .hero-scene-board::after {
   font-size: 0.83rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  box-shadow: 0 16px 32px rgba(138, 107, 47, 0.08);
+  box-shadow: 0 12px 24px rgba(138, 107, 47, 0.06);
   cursor: default;
   white-space: nowrap;
   backdrop-filter: blur(10px);
-  animation: tag-float 7s ease-in-out infinite;
+  animation: tag-float 11s ease-in-out infinite;
   overflow: hidden;
 }
 
@@ -727,9 +727,9 @@ body[data-theme="dark"] .hero-scene-board::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.36) 50%, transparent 78%);
+  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.2) 50%, transparent 78%);
   transform: translateX(-140%);
-  animation: tag-sheen 7.5s ease-in-out infinite;
+  animation: tag-sheen 12s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -747,9 +747,9 @@ body[data-theme="dark"] .hero-scene-wordmark {
 }
 
 .hero-tag:hover {
-  transform: translate3d(var(--px, 0px), calc(var(--py, 0px) - 6px), 0) rotate(var(--pr, 0deg));
+  transform: translate3d(var(--px, 0px), calc(var(--py, 0px) - 4px), 0) rotate(var(--pr, 0deg));
   border-color: var(--line-strong);
-  box-shadow: 0 20px 38px rgba(138, 107, 47, 0.1);
+  box-shadow: 0 16px 28px rgba(138, 107, 47, 0.08);
 }
 
 .tag-1,
@@ -1168,7 +1168,7 @@ body[data-theme="dark"] .sigetss-float .mini-chip {
 
 .case-card h3,
 .approach-card h3 {
-  margin: 18px 0 0;
+  margin: 16px 0 0;
   font-size: 1.34rem;
   line-height: 1.12;
   letter-spacing: -0.02em;
@@ -1176,12 +1176,37 @@ body[data-theme="dark"] .sigetss-float .mini-chip {
 
 .case-points {
   display: grid;
-  gap: 8px;
-  margin: 18px 0 0;
+  gap: 12px;
+  margin: 20px 0 0;
   padding: 0;
   list-style: none;
   color: var(--muted);
   font-size: 0.94rem;
+}
+
+.case-points li {
+  position: relative;
+  padding: 12px 14px 12px 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.42);
+  line-height: 1.55;
+}
+
+.case-points li::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 4px;
+  height: calc(100% - 24px);
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-soft));
+  opacity: 0.85;
+}
+
+body[data-theme="dark"] .case-points li {
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .text-link {
